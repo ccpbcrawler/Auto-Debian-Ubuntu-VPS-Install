@@ -15,10 +15,7 @@ wget "http://www.dotdeb.org/dotdeb.gpg"
 cat dotdeb.gpg | apt-key add -; rm dotdeb.gpg
 
 # remove unused packages
-apt-get -y --purge remove samba*
-apt-get -y --purge remove apache2*
-apt-get -y --purge remove sendmail*
-apt-get -y --purge remove bind9*
+apt-get -y purge samba* apache2* sendmail* bind9*
 
 # update
 apt-get update; apt-get -y upgrade
